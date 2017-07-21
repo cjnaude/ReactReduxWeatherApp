@@ -1,0 +1,1 @@
+export const GOTO_PAGE = "ui/GOTO_PAGE";
