@@ -3,9 +3,7 @@ import * as wcActionTypes from "../weather_current/action-types";
 
 const initialState = {
   activePage: 0,
-  isFetchingWeatherCurrent: false,
-  isFetchingWeatherHistory: false,
-  isFetchingWeatherForecast: false,
+  isStarted: false
 };
 
 const ui = (state = initialState, action) => {
@@ -14,10 +12,7 @@ const ui = (state = initialState, action) => {
       return {...state, activePage: action.pageIndex};
     }
     case wcActionTypes.REQUEST_DATA: {
-      return {...state, isFetchingWeatherCurrent: true};
-    }
-    case wcActionTypes.RECEIVE_DATA: {
-      return {...state, isFetchingWeatherCurrent: action.isStillFetching};
+      return {...state, isStarted: true};
     }
     default: {
       return state;
@@ -29,4 +24,8 @@ export default ui;
 
 export const getActivePage = (state) => {
   return state.activePage;
+};
+
+export const isAppStarted = (state) => {
+  return state.isStarted;
 };

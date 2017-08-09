@@ -13,6 +13,8 @@ export default todoApp;
 // ------------- Selectors ---------------
 //UI
 export const getActivePage = (state) => _ui.selectors.getActivePage(state.ui);
+export const isAppStarted = (state) => _ui.selectors.isAppStarted(state.ui);
 
 //Weather Current
-export const isAllDataFetched = (state) => _weatherCurrent.isAllDataFetched(state.weatherCurrent);
+export const isAllDataFetched = (state) => _weatherCurrent.selectors.isAllDataFetched(state.weatherCurrent);
+export const getWeatherData = (state) => _weatherCurrent.selectors.getWeatherData(state.weatherCurrent);

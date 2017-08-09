@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import NavMenu from "../components/nav-menu";
-import PageContent from "../components/page-content";
+import PageContent from "./page-content";
 import { getActivePage } from "../data/root-functions";
 
 let App = ({activePageIndex}) => {

@@ -1,7 +1,7 @@
 import * as React from "react";
 import NavLinkItem from "../containers/nav-link-item";
 
-const NavMenu = ({activePageIndex, onClick}) => (
+const NavMenu = ({activePageIndex}) => (
   <div className="main-nav">
     <div className="navbar navbar-inverse">
       <div className="navbar-header">
@@ -14,19 +14,19 @@ const NavMenu = ({activePageIndex, onClick}) => (
             index={0}
             activePageIndex={activePageIndex}
           >
-            <span className="glyphicon glyphicon-home"></span> Home
+            <span className="glyphicon glyphicon-cloud"></span> Current
           </NavLinkItem>
           <NavLinkItem 
             index={1}
             activePageIndex={activePageIndex}
           >
-            <span className="glyphicon glyphicon-star"></span> Page 2
+            <span className="glyphicon glyphicon-cloud"></span> Forecast
           </NavLinkItem>
           <NavLinkItem 
             index={2}
             activePageIndex={activePageIndex}
           >
-            <span className="glyphicon glyphicon-leaf"></span> Page 3
+            <span className="glyphicon glyphicon-cloud"></span> Historic
           </NavLinkItem>
         </ul>
       </div>
